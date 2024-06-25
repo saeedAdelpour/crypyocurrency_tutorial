@@ -74,3 +74,41 @@ the transaction accepts for the blockchains that length of blocks is larger
 # DOS
 Denial-of-Service (DoS) Attack 
 A denial-of-service attack restricts access to a computer or network in order to prevent intended users from using it. DoS attacks have become one of the go-to tools hackers employ in order to disturb the normal operation of computer-based services. One of the most effective approaches to completing such an attack is through a distributed approach. 
+
+# how bitcoin stores transactions
+## simple way
+jadi -(20)-> reza\
+reza -(10)-> ali\
+reza -(10)-> ali2\
+
+## bitcoin way
+It tracks it's ledgers (coin)\
+example:\
+COIN -(1)-> jadi
+jadi -(1)-> reza
+
+reza -(1/4)-> x
+reza -(3/4)-> y
+
+
+A coin is simply a gift card that is inchargable and Disposable
+
+bitcoin has a programming language based on forth (stack based)
+
+# bitcoin network
+- peer to peer (nodes connected to some other nodes, like a graph)
+- tcp and random topology (find new friends :\))
+  - you wil need to seed note
+  - others will start to forget you if you are not active for 3 hours
+- flood or gossip protocol. you tell the people you know, the check and pass if checks are passed
+  - latency can lead to different mempool, but mining will decide the ties (race condition)
+- around 10k full chain nodes are 24/7 active
+- there are also simplified payment verification nodes (SPV) or lightweight nodes the only >>>>>> headers, so only 100s of MBs instead of 100s of GBs
+
+
+# bitcoin limitations
+- created in 2009
+- each block is 1MB, each TRX is 250 bytes -> each block contain 4K TRX only
+- one block every 10 minutes -> 7 TPS (VISA handles around 2K TPS and can handle 10K TPS peak)
+- cryptographic algorithm is ESDSA. some belive this will be broken during bitcoin lifespan
+- solution? soft and hard forks
