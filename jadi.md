@@ -84,10 +84,9 @@ reza -(10)-> ali2\
 ## bitcoin way
 It tracks it's ledgers (coin)\
 example:\
-COIN -(1)-> jadi
-jadi -(1)-> reza
-
-reza -(1/4)-> x
+COIN -(1)-> jadi\
+jadi -(1)-> reza\
+reza -(1/4)-> x\
 reza -(3/4)-> y
 
 
@@ -112,3 +111,41 @@ bitcoin has a programming language based on forth (stack based)
 - one block every 10 minutes -> 7 TPS (VISA handles around 2K TPS and can handle 10K TPS peak)
 - cryptographic algorithm is ESDSA. some belive this will be broken during bitcoin lifespan
 - solution? soft and hard forks
+
+
+# store bitcoin secret keys
+storing bitcoin is all about stroing secret keys
+
+## wallet
+uses base58 encoding
+### what is base58
+it uses numbers, uppercase english words and lowercase english words, and subtitutes the similar characters
+for example, if in the address the letter "l" (lowercase L) exists, so it won't use "1" (one number)
+
+
+## vanity address
+create customize wallet address
+
+# hot storage and cold storage
+**cold** storage: **not** connected to internet
+**hot** storage: connected to internet
+
+## secret sharing
+this mechanism helps users when they lose their secret key and want to for example: get their money.\
+An example of that is 3 secret keys, and the transaction is done with 2 of them. that means, when 1 key is missed, we can do our transaction, and that 1 key is useless
+
+## wallet or bank proofs
+the wallets or banks try to prove their credit. this will happen in these ways
+
+the banks report two numbers
+- how much money currently have
+- how much **potential** money currently have
+
+they must have 3-10% of their potential money in order to keep order
+
+### proof of reserve
+the exchange or wallet website must prove that has enough money. An example of proof is sending a lot of money to it's another wallet and the users can check transactions in the network
+
+### proof of liabilities
+it uses [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree). some people can check the proof with roothash. it uses this algorithm because the users does not want their data to be shared and visible to other
+
