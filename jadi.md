@@ -149,3 +149,32 @@ the exchange or wallet website must prove that has enough money. An example of p
 ### proof of liabilities
 it uses [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree). some people can check the proof with roothash. it uses this algorithm because the users does not want their data to be shared and visible to other
 
+# mining
+the sha256 hash of these
+- previous block hash
+- merkle tree of mempool TRXs (contains TRX for ourself)
+- nounce
+must be lower than the network difficulty level
+
+## hardware
+bitcoin uses sha256 hashing
+CPU (20M), GPU(200M), FPGA(1G), ASIC(14G)
+### FPGA
+can program to compute only one thing
+
+### ASIC
+
+
+# pool
+because the hash computation is very hard (even with ASIC), some organizations create a pool of users that work on finding a specifi nounce
+
+
+
+# mining attacks
+- forking attack (spending and then mining previous block)
+- forking via bribery
+- block withholding attacks = selfish mining
+- blocklisting or punitive forking (announcing that you won't work on a chain if it contains blah blah)
+- feather forking (just like punitive forking but just for a short period of time)
+
+
